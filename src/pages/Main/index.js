@@ -17,6 +17,8 @@ import {
   Bio,
   ProfileButton,
   ProfileButtonText,
+  RemoveButton,
+  RemoveButtonText,
 } from './styles';
 
 export default class Main extends Component {
@@ -77,6 +79,14 @@ export default class Main extends Component {
     navigation.navigate('User', { user });
   };
 
+  handleRemoveUser = user => {
+    const { users } = this.state;
+
+    const filterUsers = users.filter(us => us !== user);
+
+    this.setState({ users: filterUsers });
+  };
+
   static navigationOptions = {
     title: 'Usuários',
   };
@@ -109,6 +119,11 @@ export default class Main extends Component {
           keyExtractor={user => user.login}
           renderItem={({ item }) => (
             <User>
+              <RemoveButton onPress={() => this.handleRemoveUser(item)}>
+                <RemoveButtonText>
+                  <Icon name="delete-forever" size={24} color="#7159c1" />
+                </RemoveButtonText>
+              </RemoveButton>
               <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>

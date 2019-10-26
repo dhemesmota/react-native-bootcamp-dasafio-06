@@ -81,3 +81,19 @@ export const ProfileButtonText = styled.Text`
   color: #fff;
   text-transform: uppercase;
 `;
+
+export const RemoveButton = styled(RectButton)`
+  margin-bottom: 10px;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+`;
+export const RemoveButtonText = styled.Text`
+  font-size: 14px;
+  font-weight: bold;
+  color: #7159c1;
+  text-transform: uppercase;
+`;
