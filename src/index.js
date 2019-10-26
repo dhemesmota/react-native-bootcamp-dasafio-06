@@ -1,9 +1,9 @@
-import React from "react";
-import { StatusBar } from "react-native";
+import React from 'react';
+import { StatusBar } from 'react-native';
 
-import "./config/ReactrotronConfig";
+import './config/ReactrotronConfig';
 
-import Routes from "./routes";
+import Routes from './routes';
 
 const App = () => {
   return (

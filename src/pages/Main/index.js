@@ -3,6 +3,7 @@ import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Toast from 'react-native-simple-toast';
 import api from '../../services/api';
 
 import {
@@ -64,11 +65,20 @@ export default class Main extends Component {
       avatar: response.data.avatar_url,
     };
 
-    this.setState({
-      users: [...users, data],
-      newUser: '',
-      loading: false,
-    });
+    const alreadyExists = users.find(user => user.login === data.login);
+
+    if (!alreadyExists) {
+      this.setState({
+        users: [...users, data],
+        newUser: '',
+        loading: false,
+      });
+
+      Toast.show('Usuário adicionado.', Toast.LONG, Toast.TOP);
+    } else {
+      Toast.show('Usuário já existe!', Toast.LONG, Toast.TOP);
+      this.setState({ loading: false });
+    }
 
     Keyboard.dismiss();
   };
