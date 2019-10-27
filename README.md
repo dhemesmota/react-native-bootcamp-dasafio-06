@@ -70,7 +70,7 @@ $ yarn react-native run-android ou react-native run-ios
 ```
 
 ## :memo: Licença
-Esse projeto está sob a licença MIT. Veja o arquivo [Licença](https://github.com/dhemesmota/gympoint/blob/master/LICENSE) 
+Esse projeto está sob a licença MIT. Veja o arquivo [Licença](https://github.com/dhemesmota/react-native-bootcamp-dasafio-06/blob/master/LICENSE) 
 para mais detalhes.
 
 [reactjs]: https://pt-br.reactjs.org/
