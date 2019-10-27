@@ -36,7 +36,6 @@ target 'modulo06' do
 
 
 
-  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
   pod 'react-native-simple-toast', :path => '../node_modules/react-native-simple-toast'
 
