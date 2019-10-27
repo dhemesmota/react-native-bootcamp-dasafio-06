@@ -45,9 +45,6 @@ Este projeto está sendo desenvolvido com as seguintes tecnologias:
 ## :wrench: Ferramentas
 
 - [Android Studio][android-studio]
-- [Insomnia][insomnia]
-- [MongoDB Compass][mongodb-compass]
-- [Docker][docker]
 
 
 ## :clipboard: Funcionalidades
